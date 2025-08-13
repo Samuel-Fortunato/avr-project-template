@@ -16,8 +16,7 @@ root_dir = Path(__file__).parent
 # Paths to remove in project directory
 script_path = root_dir / "create-project.py"
 template_dir = root_dir / "template"
-installer_path = root_dir / "install.py"
-uninstaller_path = Path(__file__).resolve()
+uninstaller_path = root_dir / "uninstall.py"
 
 # Determine wrapper location dynamically using shutil.which
 wrapper_name = "avr-new-project" + (".bat" if is_windows else "")
@@ -25,7 +24,7 @@ wrapper_path_str = shutils.which(wrapper_name)
 wrapper_path = Path(wrapper_path_str) if wrapper_path_str else None
 
 # Remove files/folders in root_dir except uninstall script
-for path in [script_path, template_dir, installer_path]:
+for path in [script_path, template_dir]:
     if path.exists():
         try:
             if path.is_dir():

@@ -10,7 +10,7 @@ SCRIPT_NAME = "create-project.py"
 INSTALL_NAME = "avr-project-template"
 
 # Source folder (where installer is run from)
-source_dir = Path(__file__).parent
+source_dir = Path(__file__).parent / "files"
 
 # Detect OS
 is_windows = platform.system().lower() == "windows"
@@ -35,7 +35,7 @@ wrapper_dir.mkdir(parents=True, exist_ok=True)
 # Copy project folder
 if install_dir.exists():
     shutil.rmtree(install_dir)
-shutil.copytree(source_dir, install_dir, ignore=shutil.ignore_patterns('.git'))
+shutil.copytree(source_dir, install_dir)
 
 # Create wrapper
 if is_windows:
