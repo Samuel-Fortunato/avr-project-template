@@ -14,7 +14,7 @@ is_linux = platform.system().lower() == "linux"
 root_dir = Path(__file__).parent
 
 # Paths to remove in project directory
-script_path = root_dir / "create_project.py"
+script_path = root_dir / "create-project.py"
 template_dir = root_dir / "template"
 installer_path = root_dir / "install.py"
 uninstaller_path = Path(__file__).resolve()
