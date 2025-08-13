@@ -35,7 +35,7 @@ wrapper_dir.mkdir(parents=True, exist_ok=True)
 # Copy project folder
 if install_dir.exists():
     shutil.rmtree(install_dir)
-shutil.copytree(source_dir, install_dir)
+shutil.copytree(source_dir, install_dir, ignore=shutil.ignore_patterns('.git'))
 
 # Create wrapper
 if is_windows:
