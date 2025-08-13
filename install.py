@@ -10,7 +10,7 @@ SCRIPT_NAME = "create-project.py"
 INSTALL_NAME = "avr-project-template"
 
 # Source folder (where installer is run from)
-source_dir = Path(__file__).resolve().parent
+source_dir = Path(__file__).parent
 
 # Detect OS
 is_windows = platform.system().lower() == "windows"
