@@ -1,0 +1,13 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" >
+
+<item itemtype="MCU" CircId="{{SIMULIDE_MCU}}-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-20,-68" rotation="0" hflip="1" vflip="1" label="{{SIMULIDE_MCU}}-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="{{CLOCK_SPEED_MHZ}} MHz" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Rst_enabled="true" Ext_Osc="{{EXT_OSC}}" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Led" CircId="Led-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-60,44" rotation="0" hflip="-1" vflip="1" label="Led-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-92,68" rotation="0" hflip="1" vflip="1" label="Ground-3" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Led-2-lPin" endpinid="{{SIMULIDE_MCU}}-PORTB0" pointList="-44,44,-28,44" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Ground-3-Gnd" endpinid="Led-2-rPin" pointList="-92,52,-92,44,-76,44" />
+
+</circuit>
