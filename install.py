@@ -18,8 +18,8 @@ is_linux = platform.system().lower() == "linux"
 
 # Install location (where the project will live permanently)
 if is_windows:
-    install_dir = Path(os.environ["USERPROFILE"]) / "Scripts" / INSTALL_NAME
-    wrapper_dir = Path(os.environ["USERPROFILE"]) / "Scripts"
+    install_dir = Path(os.environ["USERPROFILE"]) / "scripts" / INSTALL_NAME
+    wrapper_dir = Path(os.environ["USERPROFILE"]) / "scripts"
 elif is_linux:
     install_dir = Path.home() / ".local" / "share" / INSTALL_NAME
     wrapper_dir = Path.home() / ".local" / "bin"
