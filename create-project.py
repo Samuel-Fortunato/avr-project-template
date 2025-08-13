@@ -3,9 +3,10 @@ import os
 import shutil
 import sys
 import re
+from pathlib import Path
 
 # --- CONFIG ---
-TEMPLATE_DIR = "template"
+TEMPLATE_DIR = Path(__file__).parent / "template"
 
 # --- GET USER INPUT WITH VALIDATION ---
 while True:
