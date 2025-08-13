@@ -49,15 +49,20 @@ elif is_linux:
     wrapper_path.chmod(0o755)
 
 print(f"✅ Installed {SCRIPT_NAME} to {install_dir}")
-print(f"✅ Wrapper created at {wrapper_path}")
-print("ℹ️ Make sure the wrapper directory is in your PATH:")
-print(f"   {wrapper_dir}")
+print(f"✅ Wrapper created at {wrapper_path}\n")
+
+print("❗ IMPORTANT: Make sure the wrapper directory is in your PATH:")
+print(f"\t{wrapper_dir}")
 
 if is_windows:
-    print("   (Add it in System Properties → Environment Variables if not already there.)")
+    print("❗ (Add it in System Properties → Environment Variables if not already there.)")
 elif is_linux:
-    print("   On most systems ~/.local/bin is already in PATH.")
+    print("❗ On most linux systems ~/.local/bin is already in PATH.\n")
 
 # Pause if run from GUI so user can read output
 if is_windows:
     input("Press Enter to exit...")
+
+# If run from the shell ask to reload
+print("❗ IMPORTANT: To use the new command, start a new shell or reload the environment variables")
+
