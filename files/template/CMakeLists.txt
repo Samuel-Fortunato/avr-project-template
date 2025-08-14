@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(${PROJECT_NAME} C)
+project({{PROJECT_NAME}} C)
 
 # --- AVR CONFIG ---
 set(MCU "{{MCU}}")
