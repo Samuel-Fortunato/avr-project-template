@@ -10,6 +10,7 @@ set(AVRDUDE_ARGS -p ${MCU} -c ${PROGRAMMER})
 
 add_compile_options(-mmcu=${MCU})
 add_compile_definitions(F_CPU=${CLOCK_SPEED}UL)
+add_link_options(-mmcu=${MCU})
 
 add_executable(${PROJECT_NAME}.elf main.c)
 
